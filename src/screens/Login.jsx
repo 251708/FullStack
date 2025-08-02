@@ -89,14 +89,14 @@ export default Login
 */
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [credentials, setCredentials] = useState({
     email: "",
     password: "",
   });
-
+ let navigate = useNavigate()
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -124,7 +124,7 @@ const Login = () => {
       if (!json.success) {
         alert("Enter Valid Credentials");
       } else {
-        alert("Login Successful!");
+        navigate("/");
         // Optionally save auth token or navigate to another page
         // localStorage.setItem("authToken", json.authToken);
       }
