@@ -124,7 +124,9 @@ const Login = () => {
       if (!json.success) {
         alert("Enter Valid Credentials");
       } else {
-        navigate("/");
+        localStorage.setItem("authToken" , json.authToken );
+        console.log(localStorage.getItem("authToken"))
+    navigate('/');
         // Optionally save auth token or navigate to another page
         // localStorage.setItem("authToken", json.authToken);
       }
