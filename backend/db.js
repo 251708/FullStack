@@ -3,7 +3,7 @@
 // db.js
 const mongoose = require('mongoose');
 
-
+const mongoURI = 'mongodb+srv://SakshiFoodApp:FoodApp%233452@cluster1.czxdqo0.mongodb.net/GoFoodMern?retryWrites=true&w=majority&appName=Cluster1'
 //mongoose.set('strictQuery', false);
 
 
